@@ -6,9 +6,8 @@ import (
 	"testing"
 )
 
-
 func TestGetApiKey(t *testing.T) {
-	headerGood :=http.Header{}
+	headerGood := http.Header{}
 	headerNoAuth := http.Header{}
 	headerNoApiKey := http.Header{}
 
