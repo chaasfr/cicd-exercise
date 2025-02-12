@@ -1,0 +1,22 @@
+name: cd
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  Deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v5
+
+      - name: setup go
+        uses: actions/setup-go@v4
+
+      - name: build app
+        run: scripts/buildprod.sh
+
+        
